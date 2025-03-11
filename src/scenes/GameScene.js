@@ -336,9 +336,10 @@ class GameScene extends BaseScene {
         const region = this.regionSystem.regions[i];
         Object.keys(itemSystem.types).forEach((type) => {
           const position = getValidCollectibleSpawnPoint(region);
+
+          itemSystem.spawn(type, position.x, position.y);
+          this.spawnedPositions.push(position);
           if (this.regionSystem.isInRegion(position, region)) {
-            itemSystem.spawn(type, position.x, position.y);
-            this.spawnedPositions.push(position);
           }
         });
       }
