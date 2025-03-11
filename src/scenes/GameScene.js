@@ -186,6 +186,7 @@ class GameScene extends BaseScene {
     this.events.removeListener("playerHit");
     this.events.on("playerHit", (collisionPoint) => {
       this.sounds.skid.play();
+      this.sounds.accelerate.stop();
       // Reset speed
       this.gameState.update("speed", 0);
       this.sounds.crash.play();
