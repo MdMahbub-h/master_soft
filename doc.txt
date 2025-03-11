@@ -1,0 +1,8 @@
+the tasks with a bit more info 
+/1) fixing of the bug where game sometimes requires page to be reloaded to start a new game or where car regenerates in an out of bounds area 
+/2) fixing the losing more than 1 life when hitting objects 
+/3) adding the warning overheating sound at 120 deg (to be provided)
+/4) adding the engine blow up sound (when temp hits 130deg)
+5) making sure cases are say 150 pix inside the boundary  (sometimes they generate in the sea or where you can't get to them)
+/6) getting the 180 skid noise to work - currently it only works if you end up regenerating in the sea and cannot move (see video attached for this noise which is supposed to happen when you hit the edge of land or an object the car should do a 180 and make the noise)
+/7) and i'd also  like to make the map about 30% smaller

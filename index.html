@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wasteland Racer Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script type="module" src="src/game.js"></script>
+    <!-- <script type="module" src="testGame.js"></script> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="sidebar">
+        <img src="assets/logo.png" alt="logo" />
+        <div class="stat" id="score">Score: 0</div>
+        <div class="stat" id="current-region"></div>
+        <div class="map">
+          <canvas id="minimap-canvas"></canvas>
+        </div>
+        <div class="row">
+          <div class="case-counter">
+            <img src="assets/case.png" alt="Case" class="case-icon" />
+            <span id="cases-collected">0</span>
+          </div>
+          <!-- Add a radar container -->
+          <div id="radar-container">
+            <canvas id="radar-canvas" width="90" height="90"></canvas>
+          </div>
+        </div>
+        <div class="gauge-container">
+          <div class="gauge">
+            <div class="gauge-label">
+              Speed: <span class="stat" id="speed-text">0</span>
+            </div>
+            <div class="gauge-bar">
+              <div id="speed-fill" class="gauge-fill"></div>
+            </div>
+          </div>
+
+          <div class="gauge">
+            <div class="gauge-label">
+              Temperature:
+              <span class="stat" id="temp-text">50°C</span>
+            </div>
+            <div class="gauge-bar">
+              <div id="temp-fill" class="gauge-fill"></div>
+            </div>
+          </div>
+
+          <div class="gauge">
+            <div class="gauge-label">
+              Fuel:
+              <span class="stat" id="fuel-text">100%</span>
+            </div>
+            <div class="gauge-bar">
+              <div id="fuel-fill" class="gauge-fill"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row lifes">
+          <img src=" assets/car.png" alt="Life" class="life-icon" />
+          <img src=" assets/car.png" alt="Life" class="life-icon" />
+          <img src=" assets/car.png" alt="Life" class="life-icon" />
+        </div>
+
+        <!-- <div class="controls">
+          <div>Controls:</div>
+          <div><span class="control-key">Q</span> Accelerate</div>
+          <div><span class="control-key">A</span> Brake</div>
+          <div><span class="control-key">O</span> Turn Left</div>
+          <div><span class="control-key">P</span> Turn Right</div>
+        </div> -->
+      </div>
+      <!-- Game Container -->
+      <div id="game-container"></div>
+    </div>
+  </body>
+</html>
